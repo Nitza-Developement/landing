@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Card from './components/Card.vue';
-import type { CardContent } from './types/types';
+import type { CardContent } from './types/CardTypes';
 import { ref } from 'vue'
 
 const bgColor = ref("");
