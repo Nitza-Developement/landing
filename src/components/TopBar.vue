@@ -29,8 +29,8 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
       </div>
       <PopoverGroup class="hidden lg:flex lg:gap-x-12">
         <template v-for="item, index in headerContent.items" :key="index">
-          <Dropdown :item="item" v-if="item.innerItems" />
-          <RouterLink v-else :item="item" :href="item.href" class="flex items-center font-semibold text-gray-900 dark:text-white">{{ item.name }}</RouterLink>
+          <Dropdown :item="item" v-if="item.innerItems"/>
+          <a v-else :item="item" :href="item.href" class="flex items-center font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </template>
         <Dropdown :item="headerContent.config" :custom-process="changeLanguage"/>
         <ButtonDark/>

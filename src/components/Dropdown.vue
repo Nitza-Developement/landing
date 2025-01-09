@@ -21,8 +21,8 @@ import { ChevronDownIcon } from '@heroicons/vue/20/solid'
         class="absolute top-full z-10 mt-3 max-w-md overflow-hidden rounded-md  bg-white shadow-lg ring-1 ring-gray-900/5">
         <div>
           <div v-for="item, index in item.innerItems" :key="index"
-            class="group relative flex items-center gap-x-6 text-sm/6 hover:bg-black py-1 px-3">
-            <a v-if="item.href" :href="item.href" class="block font-semibold text-gray-900">
+            class="group relative flex items-center gap-x-6 text-sm/6 py-1 px-3 dark:bg-slate-950 dark:text-white">
+            <a v-if="item.href" :href="item.href" class="block font-semibold text-gray-900 dark:text-white">
               {{ item.name }}
             </a>
             <span v-else-if="customProcess && item.lang" @click="customProcess(item.lang)" class="cursor-pointer">
