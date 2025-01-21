@@ -75,5 +75,19 @@
       "title": "Comidas Rapidas",
       "text": "Los alimentos saludables son alimentos ricos en nutrientes"
     }
-  ]
+  ],
+  "home": {
+    "buttonPrimary": {
+      "text": "Empezar",
+      "type": "Primary"
+    },    
+    "buttonLarge": {
+      "text": "Ordenar ahora",
+      "type": "Large"
+    },    
+    "buttonIconText": {
+      "text": "Texto y icono",
+      "type": "IconText"
+    }
+  }
 }
