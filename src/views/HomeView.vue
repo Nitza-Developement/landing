@@ -26,16 +26,16 @@ const cardsContent: CardContent[] = <CardContent[]>localeMessages.cardsContent;
     <CustomButton
       :method="(params: object) => {console.log('click: ', params)}"
       :params="{valor1: 'valor1'}"
-      :text="t('home.buttonPrimary.text')" 
-      :type="<ButtonType> t('home.buttonPrimary.type')" />
+      :text="t('buttons.buttonPrimary.text')" 
+      :type="<ButtonType> t('buttons.buttonPrimary.type')" />
     <CustomButton
       :method="() => console.log('click')" 
-      :text="t('home.buttonLarge.text')" 
-      :type="<ButtonType> t('home.buttonLarge.type')" /> 
+      :text="t('buttons.buttonLarge.text')" 
+      :type="<ButtonType> t('buttons.buttonLarge.type')" /> 
     <CustomButton 
       :method="() => console.log('click')"
-      :text="t('home.buttonIconText.text')" 
-      :type="<ButtonType> t('home.buttonIconText.type')"      
+      :text="t('buttons.buttonIconText.text')" 
+      :type="<ButtonType> t('buttons.buttonIconText.type')"      
       :Icon="PhoneArrowDownLeftIcon"
       icon-custom-styles="text-white"
       text-custom-styles="text-white" /> 

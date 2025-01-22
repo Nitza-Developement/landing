@@ -76,7 +76,7 @@
       "text": "Los alimentos saludables son alimentos ricos en nutrientes"
     }
   ],
-  "home": {
+  "buttons": {
     "buttonPrimary": {
       "text": "Empezar",
       "type": "Primary"

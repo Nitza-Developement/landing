@@ -76,7 +76,7 @@
       "text": "Healthy Foods are nutrient-Dense Foods"
     }
   ],
-  "home": {
+  "buttons": {
     "buttonPrimary": {
       "text": "Get started",
       "type": "Primary"
