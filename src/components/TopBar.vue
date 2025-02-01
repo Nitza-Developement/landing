@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 import { PopoverGroup } from '@headlessui/vue';
 import Dropdown from './Dropdown.vue';
-import type { HeaderContent } from '../types/CardTypes';
-import ButtonDark from './ButtonDark.vue';
+import type { HeaderContent } from '../types/Types';
 import { useI18n } from 'vue-i18n';
 import { savedLocale } from '../i18n/i18n';
 const { t, getLocaleMessage, locale } = useI18n();
@@ -33,7 +32,6 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
           <a v-else :item="item" :href="item.href" class="flex items-center font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </template>
         <Dropdown :item="headerContent.config" :custom-process="changeLanguage"/>
-        <ButtonDark/>
       </PopoverGroup>
     </nav>
   </header>
