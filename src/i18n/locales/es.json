@@ -45,7 +45,7 @@
         "href": "#"
       }
     ],
-    "config":   {
+    "config": {
       "name": "Lenguaje",
       "innerItems": [
         {
@@ -75,5 +75,30 @@
       "title": "Comidas Rapidas",
       "text": "Los alimentos saludables son alimentos ricos en nutrientes"
     }
-  ]
+  ],
+  "buttons": {
+    "buttonPrimary": {
+      "text": "Empezar"
+    },
+    "buttonLarge": {
+      "text": "Ordenar ahora"
+    },
+    "buttonIconText": {
+      "text": "Texto y icono"
+    }
+  },
+  "badges": {
+    "Default": {
+      "text": "Por defecto 🍇"
+    },
+    "Error" : {
+      "text": "Error"
+    },
+    "Warning": {
+      "text": "Peligro"
+    },
+    "Notifications": {
+      "text": "Notificacion"
+    }
+  }
 }

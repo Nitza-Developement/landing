@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue';
-import type { HeaderItem } from '../types/CardTypes';
+import type { HeaderItem } from '../types/Types';
 
 defineProps<{ item: HeaderItem, customProcess?: (lang: string) => void }>()
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
@@ -18,7 +18,7 @@ import { ChevronDownIcon } from '@heroicons/vue/20/solid'
       enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150"
       leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
       <PopoverPanel
-        class="absolute top-full z-10 mt-3 max-w-md overflow-hidden rounded-md  bg-white shadow-lg ring-1 ring-gray-900/5">
+        class="absolute top-full z-10 mt-3 max-w-md rounded-md bg-white shadow-lg ring-1 ring-gray-900/5">
         <div>
           <div v-for="item, index in item.innerItems" :key="index"
             class="group relative flex items-center gap-x-6 text-sm/6 py-1 px-3 dark:bg-slate-950 dark:text-white">

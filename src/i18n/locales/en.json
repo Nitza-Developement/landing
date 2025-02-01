@@ -21,7 +21,7 @@
       },
       {
         "name": "link",
-        "href":"#"
+        "href": "#"
       },
       {
         "name": "dropdownMenu2",
@@ -45,7 +45,7 @@
         "href": "#"
       }
     ],
-    "config":   {
+    "config": {
       "name": "Language",
       "innerItems": [
         {
@@ -75,5 +75,30 @@
       "title": "Fast Foods",
       "text": "Healthy Foods are nutrient-Dense Foods"
     }
-  ]
+  ],
+  "buttons": {
+    "buttonPrimary": {
+      "text": "Get started"
+    },
+    "buttonLarge": {
+      "text": "Order now"
+    },
+    "buttonIconText": {
+      "text": "Icon Text"
+    }
+  },
+  "badges": {
+    "Default": {
+      "text": "Default 🍇"
+    },
+    "Error": {
+      "text": "Error"
+    },
+    "Warning": {
+      "text": "Warning"
+    },
+    "Notifications": {
+      "text": "Notifications"
+    }
+  }
 }

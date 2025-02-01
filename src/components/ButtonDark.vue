@@ -17,8 +17,8 @@ toggleDarkMode(localStorage.getItem('mode'));
 
 <template>
     <button @click="toggleDarkMode()"
-      class="flex items-center p-2 rounded bg-transparent">
-      <svg v-if="!isDarkMode" class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"
+      class="flex items-center p-2 rounded-full fixed bottom-5 right-9 bg-orange-500">
+      <svg v-if="!isDarkMode" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path clip-rule="evenodd" fill-rule="evenodd"
           d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 

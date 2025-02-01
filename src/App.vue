@@ -7,7 +7,7 @@ import HomeView from './views/HomeView.vue';
 
 <template>  
   <TopBar />
-  <div class="pt-14">
+  <div class="pt-20">
     <HomeView />    
   </div>
 </template>
