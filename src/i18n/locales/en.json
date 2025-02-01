@@ -78,16 +78,27 @@
   ],
   "buttons": {
     "buttonPrimary": {
-      "text": "Get started",
-      "type": "Primary"
-    },    
+      "text": "Get started"
+    },
     "buttonLarge": {
-      "text": "Order now",
-      "type": "Large"
-    },    
+      "text": "Order now"
+    },
     "buttonIconText": {
-      "text": "Icon Text",
-      "type": "IconText"
+      "text": "Icon Text"
+    }
+  },
+  "badges": {
+    "Default": {
+      "text": "Default 🍇"
+    },
+    "Error": {
+      "text": "Error"
+    },
+    "Warning": {
+      "text": "Warning"
+    },
+    "Notifications": {
+      "text": "Notifications"
     }
   }
 }

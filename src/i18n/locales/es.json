@@ -45,7 +45,7 @@
         "href": "#"
       }
     ],
-    "config":   {
+    "config": {
       "name": "Lenguaje",
       "innerItems": [
         {
@@ -78,16 +78,27 @@
   ],
   "buttons": {
     "buttonPrimary": {
-      "text": "Empezar",
-      "type": "Primary"
-    },    
+      "text": "Empezar"
+    },
     "buttonLarge": {
-      "text": "Ordenar ahora",
-      "type": "Large"
-    },    
+      "text": "Ordenar ahora"
+    },
     "buttonIconText": {
-      "text": "Texto y icono",
-      "type": "IconText"
+      "text": "Texto y icono"
+    }
+  },
+  "badges": {
+    "Default": {
+      "text": "Por defecto 🍇"
+    },
+    "Error" : {
+      "text": "Error"
+    },
+    "Warning": {
+      "text": "Peligro"
+    },
+    "Notifications": {
+      "text": "Notificacion"
     }
   }
 }
