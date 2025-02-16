@@ -32,4 +32,10 @@ export type SubscribeContent = {
 	placeHolder: string	
 }
 
+export type ReviewContent = {
+	name: string,
+	text: string,
+	img: string,
+	stars: number
+}
 
