@@ -26,3 +26,10 @@ export type ButtonType = "Primary" | "Large" | "Icon" | "IconText";
 
 export type BadgeType = "Default" | "count";
 
+export type SubscribeContent = {
+	title: string,
+	text: string,
+	placeHolder: string	
+}
+
+

@@ -7,6 +7,9 @@ import CustomButton from '../components/CustomButton.vue';
 import { PhoneArrowDownLeftIcon } from "@heroicons/vue/24/outline";
 import ButtonDark from '../components/ButtonDark.vue';
 import Badge from '../components/Badge.vue';
+import Subscribe from '../components/Subscribe.vue';
+
+
 
 const { getLocaleMessage, t } = useI18n();
 
@@ -35,4 +38,5 @@ const cardsContent: CardContent[] = <CardContent[]>localeMessages.cardsContent;
     <Badge :text="t('badges.Error.text')" :type="<BadgeType>'Default'"/>
     <Badge :text="t('badges.Notifications.text')" :type="<BadgeType>'count'" :count= 8 />
   </div>
+  <Subscribe />
 </template>

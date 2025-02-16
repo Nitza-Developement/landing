@@ -100,5 +100,12 @@
     "Notifications": {
       "text": "Notificacion"
     }
+  },
+  "home": {
+    "subscribe": {
+      "title": "Suscribir",
+      "text": "A Res es una tienda de autoservicio que ofrece una amplia variedad de alimentos, bebidas y productos para el hogar. Estamos interactuando con sus clientes y su equipo.",
+      "placeHolder": "Dirección de correo"
+    }
   }
 }
