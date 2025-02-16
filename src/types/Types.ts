@@ -21,3 +21,8 @@ export type HeaderContent = {
 	config: HeaderItem,
 	logoName: string
 }
+
+export type ButtonType = "Primary" | "Large" | "Icon" | "IconText";
+
+export type BadgeType = "Default" | "count";
+
