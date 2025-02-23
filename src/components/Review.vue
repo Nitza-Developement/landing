@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { StarIcon as SolidStarIcon } from "@heroicons/vue/24/solid";
 import { StarIcon as OutlineStarIcon } from '@heroicons/vue/24/outline';
-import type { ReviewContent } from "../types/Types";
+import type { ReviewContent } from "../store/Types";
 
 defineProps<{
   review: ReviewContent
