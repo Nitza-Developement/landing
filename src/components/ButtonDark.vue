@@ -4,7 +4,7 @@ import { isDarkMode, toggleDarkMode } from '../store/darkMode';
 
 <template>
     <button @click="toggleDarkMode()"
-      class="flex items-center p-2 rounded-full fixed bottom-5 right-9 bg-orange-500">
+      class="flex items-center p-2 rounded-full fixed bottom-5 right-4 bg-orange-500">
       <svg v-if="!isDarkMode" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path clip-rule="evenodd" fill-rule="evenodd"

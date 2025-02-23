@@ -7,7 +7,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-  <div class="bg-orange-100 p-4 m-2 w-80 rounded-md dark:bg-amber-950">
+  <div>
     <form class="space-y-2 mb-6">
       <label for="SubscribeEmail" class="text-xl font-medium mb-4 dark:text-white">{{ t('home.subscribe.title') }}</label>
       <div class="flex shadow-sm">
