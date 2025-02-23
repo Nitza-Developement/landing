@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { onBeforeMount, onMounted, ref } from 'vue';
-import type { ReviewContent } from '../types/Types';
+import type { ReviewContent } from '../store/Types';
 import Review from './Review.vue';
 import Badge from './Badge.vue';
 import { useI18n } from 'vue-i18n';
@@ -35,7 +35,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="p-5 w-[50%]">
+  <div class="p-5 w-full md:w-1/2">
     <Badge class="dark:bg-amber-950" :text="t('home.reviews.badge_text')" type="Default" />
     <h2 class="text-3xl font-semibold text-slate-900 max-w-xl mb-4 mt-2 dark:text-white"
       v-html="t('home.reviews.title')"></h2>

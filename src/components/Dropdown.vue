@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue';
-import type { HeaderItem } from '../types/Types';
+import type { HeaderItem } from '../store/Types';
 
 defineProps<{ item: HeaderItem, customProcess?: (lang: string) => void }>()
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { FunctionalComponent } from 'vue';
-import type { ButtonType } from '../types/Types';
+import type { ButtonType } from '../store/Types';
 
 defineProps<{
   method: Function,
