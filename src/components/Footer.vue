@@ -113,7 +113,7 @@ import Subscribe from './Subscribe.vue';
                         </p>
                     </div>
 
-                    <div class="flex justify-end gap-6">
+                    <div class="flex justify-end gap-6 pr-4">
                         <a href="javascript:void(0)" class="text-slate-500 font-medium">
                             Terms
                         </a>
