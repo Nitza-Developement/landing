@@ -7,9 +7,9 @@ import CustomButton from '../components/CustomButton.vue';
 import { PhoneArrowDownLeftIcon } from "@heroicons/vue/24/outline";
 import ButtonDark from '../components/ButtonDark.vue';
 import Badge from '../components/Badge.vue';
-import Subscribe from '../components/Subscribe.vue';
 import Reviews from '../components/Carrusel.vue';
 import ReviewBars from '../components/ReviewBars.vue';
+import Footer from '../components/Footer.vue';
 
 
 const { getLocaleMessage, t } = useI18n();
@@ -39,10 +39,11 @@ const cardsContent: CardContent[] = <CardContent[]>localeMessages.cardsContent;
     <Badge :text="t('badges.Error.text')" :type="<BadgeType>'Default'" />
     <Badge :text="t('badges.Notifications.text')" :type="<BadgeType>'count'" :count=8 />
   </div>
-  <Subscribe />
   <Reviews />
   <ReviewBars img="https://coderthemes.com/yum/assets/avatar1-25906796.png" name="Jakob Culhane" :stars=4
     text="Healthy and Delicious Food" />
   <ReviewBars img="https://coderthemes.com/yum/assets/burger-1-0c3ba5a6.svg" name="MCD Veg Burger" :stars=5
     signal="$"  text2="8.14" />
+    <footer  class="border-t border-slate-200"><Footer/></footer>
+   
 </template>
