@@ -1,4 +1,4 @@
-import type { ReviewContent } from "../types/Types";
+import type { ReviewContent } from "../store/Types";
 
 export const apiCallForReviews = async (): Promise<ReviewContent[]> => new Promise((resolve, reject) => {
   // Simular una operación asíncrona, como una llamada a una API

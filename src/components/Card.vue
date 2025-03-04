@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CardContent } from '../types/Types';
+import type { CardContent } from '../store/Types';
 
 
 defineProps<{ cardContent: CardContent }>()

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { BadgeType } from '../types/Types';
+import type { BadgeType } from '../store/Types';
 
 defineProps<{
   type: BadgeType,
@@ -15,5 +15,3 @@ defineProps<{
   <span v-if="type === 'count'" class="left-2 bg-red-600 rounded-full ml-1 px-1 text-white">{{ count  }}</span>
 </span>
 </template>
-
-<style scoped></style>
