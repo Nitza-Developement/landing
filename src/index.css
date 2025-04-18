@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 /* Estilos por defecto para las etiquetas de encabezado */
+* {
+  letter-spacing: 0.05em;
+}
+
 
 /* h1 */
 h1 {

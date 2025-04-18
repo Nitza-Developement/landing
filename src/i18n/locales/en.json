@@ -738,32 +738,29 @@
       {
         "name": "Admin",
         "href": "#"
-      },
-      {
-        "userList": [
-          {
-            "name": "Admin",
-            "code": "Ad",
-            "href": "#"
-          },
-          {
-            "name": "Cart",
-            "code": "Ca",
-            "href": "#"
-          },
-          {
-            "name": "Wishlist",
-            "code": "WL",
-            "href": "#"
-          },
-          {
-            "name": "Log Out",
-            "code": "LO",
-            "href": "#"
-          }
-        ]
       }
     ],
+    "userList": {
+      "name": "UserDropdown",
+      "innerItems":[
+        {
+          "name": "Admin",
+          "href": "#"
+        },
+        {
+          "name": "Cart",
+          "href": "#"
+        },
+        {
+          "name": "Wishlist",
+          "href": "#"
+        },
+        {
+          "name": "Log Out",
+          "href": "#"
+        }
+      ]
+    },
     "config": {
       "name": "Language",
       "actual": "English",

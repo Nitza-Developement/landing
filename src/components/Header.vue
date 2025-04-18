@@ -3,12 +3,9 @@ import Dropdown from './Dropdown.vue';
 import { useI18n } from 'vue-i18n';
 import { savedLocale } from '../i18n/i18n';
 import type { HeaderContent } from '../store/Types';
-import { ref } from 'vue';
 import MegaMenu from './MegaMenu.vue';
 const { getLocaleMessage } = useI18n();
 
-
-const isOpen = ref(false);
 
 const localeMessages = getLocaleMessage(savedLocale());
 const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
@@ -41,11 +38,11 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
 
           <!-- Nevigation Menu -->
           <!-- el menu del nav esta siendo pintado por la directiva v-for -->
-          <ul class="lg:flex items-center justify-center hidden relative">
+          <ul class="lg:flex 2xl:ml-60 items-center justify-center hidden relative">
             <li v-for="item, index in headerContent.items" :key="index">
               <Dropdown v-if="item.innerItems"  :item='item' :customStyle="'mt-3 min-w-52'" />
               <MegaMenu v-else-if="item.megaMenuContent"  :item='item' />
-              <a class="cursor-pointer" v-else>{{ item.name }}</a>
+              <a class="cursor-pointer py-2 px-4" v-else>{{ item.name }}</a>
             </li>
           </ul>
 
@@ -94,74 +91,8 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
 
             <!-- User Dropdown -->
             <li class="flex ">
-              <div class="relative inline-flex"
-              @mouseenter="isOpen = true" @mouseleave="isOpen = false">
-                <a class="relative flex items-center text-base text-slate-600 hover:text-primary"
-                  href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    data-lucide="user" class="lucide lucide-user w-5 h-5">
-                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
-                </a>
-                <transition enter-active-class="transition ease-out duration-200"
-                  enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0"
-                  leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0"
-                  leave-to-class="opacity-0 translate-y-1">
-                  <div v-show="isOpen" @mouseenter="isOpen = true" @mouseleave="isOpen = false"
-                    class="min-w-[200px] absolute top-full -right-24 mt-4 opacity-0 z-20 bg-white shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg border border-slate-100 p-1.5 dark:bg-slate-50">
-                    <ul class="flex flex-col gap-1">
-                      <li>
-                        <a class="flex items-center gap-3 font-normal text-slate-600 py-2 px-3 hover:text-slate-700 hover:bg-slate-100 rounded"
-                          href="admin-dashboard.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" data-lucide="user-circle"
-                            class="lucide lucide-user-circle h-4 w-4">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <circle cx="12" cy="10" r="3"></circle>
-                            <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path>
-                          </svg> Admin</a>
-                      </li>
-                      <li>
-                        <a class="flex items-center gap-3 font-normal text-slate-600 py-2 px-3 hover:text-slate-700 hover:bg-slate-100 rounded"
-                          href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" data-lucide="shopping-cart"
-                            class="lucide lucide-shopping-cart h-4 w-4">
-                            <circle cx="8" cy="21" r="1"></circle>
-                            <circle cx="19" cy="21" r="1"></circle>
-                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12">
-                            </path>
-                          </svg>
-                          Cart</a>
-                      </li>
-                      <li>
-                        <a class="flex items-center gap-3 font-normal text-slate-600 py-2 px-3 hover:text-slate-700 hover:bg-slate-100 rounded"
-                          href="wishlist.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" data-lucide="heart"
-                            class="lucide lucide-heart h-4 w-4">
-                            <path
-                              d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
-                            </path>
-                          </svg>
-                          Wishlist</a>
-                      </li>
-                      <li>
-                        <a class="flex items-center gap-3 font-normal text-slate-600 py-2 px-3 hover:text-slate-700 hover:bg-slate-100 rounded"
-                          href="auth-login.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" data-lucide="log-out"
-                            class="lucide lucide-log-out h-4 w-4">
-                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                            <polyline points="16 17 21 12 16 7"></polyline>
-                            <line x1="21" x2="9" y1="12" y2="12"></line>
-                          </svg> Log Out</a>
-                      </li>
-                    </ul>
-                  </div>
-                </transition>
+              <div class="relative inline-flex">
+                <Dropdown :item="headerContent.userList" :is-user-list="true" :customStyle="'mt-3 min-w-44 -left-20'" />
               </div>
             </li>
           </ul>

@@ -8,6 +8,7 @@ export type InnerItem = {
 	name: string,
 	href?: string,
 	lang?: string,
+	code?: string,
 }
 
 export type MegaMenuContent = {
@@ -29,13 +30,13 @@ export type HeaderItem = {
 	href?: string,
 	innerItems?: InnerItem[]
 	megaMenuContent?: MegaMenuContent,
-	userList?: InnerItem[],
 }
 
 export type HeaderContent = {
 	items: HeaderItem[],
 	config: HeaderItem,
 	logoName: string
+	userList: HeaderItem,
 }
 
 export type ButtonType = "Primary" | "Large" | "Icon" | "IconText";

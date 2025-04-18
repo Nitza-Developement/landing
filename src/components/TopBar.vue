@@ -23,11 +23,11 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
             Offer</a></h5>
 
         <ul class="flex items-center justify-end gap-4">
-          <li class="flex menu-item">
+          <li class="flex">
             <a class="text-sm hover:text-primary" href="faqs.html">Help</a>
           </li>
 
-          <li class="flex menu-item">
+          <li class="flex">
             <a class="text-sm hover:text-primary" href="contact-us.html">Contact Us</a>
           </li>
         </ul>

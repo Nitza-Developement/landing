@@ -6,15 +6,15 @@ import { ref } from 'vue';
 defineProps<{ item: HeaderItem }>();
 
 const isOpen = ref(false);
-const selectedButton = ref<string | null>("wraps"); // Estado para rastrear el botón seleccionado
+const selectedButton = ref<string>("wraps"); // Estado para rastrear el botón seleccionado
 
 </script>
 
 <template>
-  <div class="z-20 flex">
+  <div class="z-20 flex text-font">
     <!-- aqui se selecciona que tipo de elemento se va a pintar, menu, menu de lenguaje o enlace -->
     <div
-      class="inline-flex relative whitespace-nowrap items-center text-sm lg:text-base font-medium text-slate-800 py-2 px-4 rounded-full hover:text-primary"
+      class="inline-flex relative items-center text-sm lg:text-base font-medium text-slate-800 py-2 px-4 rounded-full hover:text-primary"
       @mouseenter="isOpen = true" @mouseleave="isOpen = false">
       <div>
         <span class="flex items-center cursor-pointer">
@@ -27,7 +27,7 @@ const selectedButton = ref<string | null>("wraps"); // Estado para rastrear el b
         enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150"
         leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
         <div v-show="isOpen"
-          class="m-0 fixed top-20 right-20 bottom-auto left-20  z-30 rounded-md bg-white shadow-lg ring-1 mt-3 ring-gray-900/5"
+          class="m-0 fixed top-24 2xl:right-48 bottom-auto 2xl:left-48 left-20 right-20  z-30 rounded-md bg-white shadow-lg ring-1 mt-3 ring-gray-900/5"
           @mouseenter="isOpen = true" @mouseleave="isOpen = false">
           <div class="bg-white shadow-lg rounded-lg border border-slate-200 dark:bg-slate-50">
             <div class="grid grid-cols-12">
