@@ -10,10 +10,26 @@ export type InnerItem = {
 	lang?: string,
 }
 
+export type MegaMenuContent = {
+	buttons: {
+		name: string;
+		id: string;
+	}[];
+	panels: {
+		id: string;
+		subPanels: {
+			title: string;
+			items: InnerItem[];
+		}[];
+	}[];
+}
+
 export type HeaderItem = {
 	name: string,
 	href?: string,
 	innerItems?: InnerItem[]
+	megaMenuContent?: MegaMenuContent,
+	userList?: InnerItem[],
 }
 
 export type HeaderContent = {
@@ -29,7 +45,7 @@ export type BadgeType = "Default" | "count";
 export type SubscribeContent = {
 	title: string,
 	text: string,
-	placeHolder: string	
+	placeHolder: string
 }
 
 export type ReviewContent = {
