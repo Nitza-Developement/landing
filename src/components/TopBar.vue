@@ -18,7 +18,7 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
     <div class="container">
       <!-- <nav class="grid lg:grid-cols-3 items-center gap-4"> -->
       <nav class="flex items-center justify-between p-4">
-        <Dropdown :item="headerContent.config" :is-language-selector="true" />    
+        <Dropdown :item="headerContent.config" :is-language-selector="true" :customStyle="'mt-3 min-w-32'"/>    
         <h5 class="text-sm text-primary-50 text-center">Free Delivery Over $50 <a class="font-semibold underline">Claim
             Offer</a></h5>
 

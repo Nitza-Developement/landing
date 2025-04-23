@@ -52,7 +52,7 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
               <input class="ps-10 pe-4 py-2.5 block w-64 border border-transparent placeholder-orange-500 
                   rounded-full text-sm bg-orange-400/40 text-primary focus:border-orange-600 focus:outline-none"
                 placeholder="Search for items..." type="search">
-              <span class="absolute start-4 top-3">
+              <span class="absolute start-4 top-3 cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   data-lucide="search" class="lucide lucide-search w-4 h-4 text-orange-500">
@@ -63,7 +63,7 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
             </li>
 
             <!-- Search Button (small screen) -->
-            <li class="2xl:hidden flex ">
+            <li class="2xl:hidden flex cursor-pointer">
               <button class="relative flex text-base transition-all text-slate-600 hover:text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -92,7 +92,7 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
             <!-- User Dropdown -->
             <li class="flex ">
               <div class="relative inline-flex">
-                <Dropdown :item="headerContent.userList" :is-user-list="true" :customStyle="'mt-3 min-w-44 -left-20'" />
+                <Dropdown :item="headerContent.userList" :is-user-list="true" :customStyle="'mt-3 min-w-44 sm:-left-20 -left-32'" />
               </div>
             </li>
           </ul>
@@ -100,140 +100,4 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
       </div>
     </div>
   </header>
-  <div
-    class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 left-0 transition-all transform h-full max-w-[270px] w-full z-60 border-r border-slate-200 bg-white dark:bg-slate-50 open"
-    aria-overlay="true" tabindex="-1">
-    <div
-      class="flex justify-center items-center border-b border-dashed border-slate-200 h-16 transition-all duration-300">
-      <a href="home.html">
-        <img src="/imagenes/logo-dark-6dbab3e1.png" alt="logo" class="h-15 flex dark:hidden">
-        <img src="/imagenes/logo-light-35c89c2c.png" alt="logo" class="h-15 hidden dark:flex">
-      </a>
-    </div>
-    <div class="h-[calc(100%-4rem)]" data-simplebar="init">
-      <div class="simplebar-wrapper" style="margin: 0px;">
-        <div class="simplebar-height-auto-observer-wrapper">
-          <div class="simplebar-height-auto-observer"></div>
-        </div>
-        <div class="simplebar-mask">
-          <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
-            <div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content"
-              style="height: 100%; overflow: hidden;">
-              <div class="simplebar-content" style="padding: 0px;">
-                <nav class="hs-accordion-group p-4 w-full flex flex-col flex-wrap">
-                  <ul class="space-y-2.5">
-                    <li>
-                      <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                        href="home.html">
-                        Home
-                      </a>
-                    </li>
-
-                    <li class="hs-accordion" id="product-categories-accordion">
-                      <a class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-primary hs-accordion-active:bg-slate-100 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                        href="javascript:;">
-                        Product <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round" data-lucide="chevron-down"
-                          class="lucide lucide-chevron-down w-5 h-5 ms-auto hs-accordion-active:rotate-180 transition-all">
-                          <path d="m6 9 6 6 6-6"></path>
-                        </svg>
-                      </a>
-
-                      <div id="product-categories-accordion"
-                        class="hs-accordion-content w-full overflow-hidden transition-[height] hidden">
-                        <ul class="pt-2 ps-2">
-                          <li>
-                            <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                              href="product-grid.html">
-                              Product Grid
-                            </a>
-                          </li>
-                          <li>
-                            <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                              href="product-list.html">
-                              Product List
-                            </a>
-                          </li>
-                          <li>
-                            <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                              href="product-detail.html">
-                              Product Details
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                        href="wishlist.html">
-                        My Wishlist
-                      </a>
-                    </li>
-
-                    <li>
-                      <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                        href="contact-us.html">
-                        Contact Us
-                      </a>
-                    </li>
-
-                    <li>
-                      <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                        href="faqs.html">
-                        FAQs
-                      </a>
-                    </li>
-
-                    <li>
-                      <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                        href="error-404.html">
-                        Error Page
-                      </a>
-                    </li>
-
-                    <li>
-                      <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                        href="auth-login.html">
-                        Login
-                      </a>
-                    </li>
-
-                    <li>
-                      <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                        href="auth-register.html">
-                        Register
-                      </a>
-                    </li>
-
-                    <li>
-                      <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                        href="auth-recoverpw.html">
-                        Forgot Password
-                      </a>
-                    </li>
-
-                    <li>
-                      <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-100"
-                        href="auth-reset-password.html">
-                        Reset Password
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="simplebar-placeholder" style="width: 269px; height: 482px;"></div>
-      </div>
-      <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-        <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
-      </div>
-      <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
-        <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
-      </div>
-    </div>
-  </div>
 </template>

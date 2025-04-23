@@ -745,18 +745,22 @@
       "innerItems":[
         {
           "name": "Admin",
+          "code": "Ad",
           "href": "#"
         },
         {
           "name": "Cart",
+          "code": "Ca",
           "href": "#"
         },
         {
           "name": "Wishlist",
+          "code": "WL",
           "href": "#"
         },
         {
           "name": "Log Out",
+          "code": "LO",
           "href": "#"
         }
       ]
