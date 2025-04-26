@@ -69,25 +69,27 @@ const isOpen: Ref<boolean> = ref(false);
     <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1"
       enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150"
       leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-      <div v-show="isOpen" :class="customStyle ? customStyle : 'bg-red'"
-        class="absolute top-full whitespace-nowrap z-10 rounded-md bg-white shadow-lg ring-1 ring-gray-900/5"
+      <div v-show="isOpen" :class="customStyle"
+        class="absolute top-full whitespace-nowrap z-10 rounded-md bg-white shadow-lg ring-1 ring-gray-900/5 dark:bg-slate-950"
         @mouseenter="isOpen = true" @mouseleave="isOpen = false">
         <div>
           <div v-for="(item, index) in item.innerItems" :key="index">
             <span v-if="isLanguageSelector && item.lang" @click="changeLanguage(item.lang)"
-              class="cursor-pointer flex items-center gap-2 font-normal text-slate-600 py-2 px-3 rounded"
+              class="cursor-pointer flex items-center gap-2 font-normal text-slate-600 hover:text-slate-700 hover:bg-slate-100 
+              py-2 px-3 rounded dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-300"
               href="javascript:void(0)">
               <img alt="flag" class="h-4" :src="flags[item.lang]">
               {{ item.name }}
             </span>
             <a v-else-if="isUserList && item.code"
-              class="flex items-center gap-3 m-1 font-normal text-slate-600 py-2 px-3 hover:text-slate-700 hover:bg-slate-100 rounded cursor-pointer"
+              class="flex items-center gap-3 m-1 font-normal text-slate-600 py-2 px-3 hover:text-slate-700 hover:bg-slate-100 rounded 
+              cursor-pointer dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-300"
               href="javascript:void(0)">
               <component :is="icons[item.code]" class="size-5 text-gray-600" />
               {{ item.name }}
             </a>
             <a v-else :href="item.href" class="flex items-center font-normal text-slate-600 py-2 
-            px-3 transition-all hover:text-slate-950 hover:bg-slate-100 rounded">
+            px-3 transition-all hover:text-slate-950 hover:bg-slate-100 rounded dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-300">
               {{ item.name }}
             </a>
           </div>
