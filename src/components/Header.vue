@@ -19,7 +19,7 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
         <div class="flex items-center justify-between p-4">
           <div class="flex">
             <!-- Mobile Menu Toggle Button -->
-            <button class="lg:hidden block " data-hs-overlay="#mobile-menu">
+            <button class="lg:hidden block ">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu"
                 class="lucide lucide-menu w-7 h-7 text-slate-600 me-4 hover:text-primary">

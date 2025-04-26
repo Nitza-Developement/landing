@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-// import { PopoverGroup } from '@headlessui/vue';
 import Dropdown from './Dropdown.vue';
 import type { HeaderContent } from '../store/Types';
 import { useI18n } from 'vue-i18n';
 import { savedLocale } from '../i18n/i18n';
-// import { isDarkMode } from '../store/darkMode';
 const { getLocaleMessage } = useI18n();
 
 
@@ -16,7 +14,6 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
 <template>
   <div class="h-8 lg:flex justify-center items-center hidden bg-primary-950 text-white z-20">
     <div class="container">
-      <!-- <nav class="grid lg:grid-cols-3 items-center gap-4"> -->
       <nav class="flex items-center justify-between p-4">
         <Dropdown :item="headerContent.config" :is-language-selector="true" :customStyle="'mt-3 min-w-32'"/>    
         <h5 class="text-sm text-primary-50 text-center">Free Delivery Over $50 <a class="font-semibold underline">Claim

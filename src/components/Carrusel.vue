@@ -12,7 +12,6 @@ const { t } = useI18n();
 let reviews = ref<ReviewContent[]>([]);
 onBeforeMount(async () => {
   reviews.value = await apiCallForReviews();
-  console.log("reviews: ", reviews);
 });
 
 const activeTab = ref(0);
