@@ -40,7 +40,7 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
           <!-- el menu del nav esta siendo pintado por la directiva v-for -->
           <ul class="lg:flex 2xl:ml-60 items-center justify-center hidden relative">
             <li class="dark:text-slate-300" v-for="item, index in headerContent.items" :key="index">
-              <Dropdown v-if="item.innerItems"  :item='item' :customStyle="'mt-3 min-w-52'" />
+              <Dropdown v-if="item.innerItems"  :item='item' :customStyle="'mt-3 min-w-48 -left-8'" />
               <MegaMenu v-else-if="item.megaMenuContent"  :item='item' />
               <a class="cursor-pointer py-2 px-4" v-else>{{ item.name }}</a>
             </li>
