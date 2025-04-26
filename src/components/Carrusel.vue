@@ -12,7 +12,6 @@ const { t } = useI18n();
 let reviews = ref<ReviewContent[]>([]);
 onBeforeMount(async () => {
   reviews.value = await apiCallForReviews();
-  console.log("reviews: ", reviews);
 });
 
 const activeTab = ref(0);
@@ -36,7 +35,7 @@ onMounted(() => {
 
 <template>
   <div class="p-5 w-full md:w-1/2">
-    <Badge class="dark:bg-amber-950" :text="t('home.reviews.badge_text')" type="Default" />
+    <Badge :text="t('home.reviews.badge_text')" type="Default" />
     <h2 class="text-3xl font-semibold text-slate-900 max-w-xl mb-4 mt-2 dark:text-white"
       v-html="t('home.reviews.title')"></h2>
     <div>

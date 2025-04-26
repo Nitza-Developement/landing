@@ -3,50 +3,772 @@
     "logoName": "Enterprise",
     "items": [
       {
-        "name": "dropdownMenu",
-        "innerItems": [
-          {
-            "name": "x",
-            "href": "#"
-          },
-          {
-            "name": "y",
-            "href": "#"
-          },
-          {
-            "name": "z",
-            "href": "#"
-          }
-        ]
-      },
-      {
-        "name": "link",
+        "name": "Home",
         "href": "#"
       },
       {
-        "name": "dropdownMenu2",
+        "name": "Product",
         "innerItems": [
           {
-            "name": "x",
+            "name": "Product Grid",
             "href": "#"
           },
           {
-            "name": "y",
+            "name": "Product List",
             "href": "#"
           },
           {
-            "name": "z",
+            "name": "Product Detail",
             "href": "#"
           }
         ]
       },
       {
-        "name": "link2",
+        "name": "Mega Menu",
+        "megaMenuContent": {
+          "buttons": [
+            {
+              "name": "Wraps",
+              "id": "wraps"
+            },
+            {
+              "name": "Noodles",
+              "id": "noodles"
+            },
+            {
+              "name": "Mexican cuisine",
+              "id": "mexican"
+            },
+            {
+              "name": "Tacos",
+              "id": "tacos"
+            },
+            {
+              "name": "Smart Meals",
+              "id": "smart-meals"
+            },
+            {
+              "name": "Burger",
+              "id": "burger"
+            },
+            {
+              "name": "Beverages & Desserts",
+              "id": "beverages-desserts"
+            }
+          ],
+          "panels": [
+            {
+              "id": "wraps",
+              "subPanels": [
+                {
+                  "title": "Bean-Based Wraps",
+                  "items": [
+                    {
+                      "name": "Black Bean Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Refried Bean and Cheese Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Falafel Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Chickpea and Hummus Wrap",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Grilled Vegetable Wraps",
+                  "items": [
+                    {
+                      "name": "Grilled Veggie Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Roasted Red Pepper Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Portobello Mushroom Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Eggplant Parmesan Wrap",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Cheese and Spinach Wraps",
+                  "items": [
+                    {
+                      "name": "Spinach and Feta Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Paneer Tikka Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Caprese Wrap",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Chicken Wraps",
+                  "items": [
+                    {
+                      "name": "Grilled Chicken Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Buffalo Chicken Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Chicken Caesar Wrap",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Chicken Shawarma Wrap",
+                      "href": "#"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "noodles",
+              "subPanels": [
+                {
+                  "title": "Italian Pasta Dishes",
+                  "items": [
+                    {
+                      "name": "Spaghetti Bolognese",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Fettuccine Alfredo",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Lasagna",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Carbonara",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Penne alla Vodka",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian Noodle Dishes",
+                  "items": [
+                    {
+                      "name": "Ramen",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Pad Thai",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Pho",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Chow Mein",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Udon Stir-Fry",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Soba Noodles",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Lo Mein",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Chinese Noodle Dishes",
+                  "items": [
+                    {
+                      "name": "Beef Chow Fun",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Dan Dan Noodles",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Sesame Noodles",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Wonton Noodle Soup",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Zha Jiang Mian",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Japanese Noodle Dishes",
+                  "items": [
+                    {
+                      "name": "Yakisoba",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Tempura Udon",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Hiyashi Chukakies",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Sushi Rolls",
+                      "href": "#"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mexican",
+              "subPanels": [
+                {
+                  "title": "Thai Noodle Dishes",
+                  "items": [
+                    {
+                      "name": "Drunken Noodles",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Tom Yum Noodle Soup",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Green Curry Noodles",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Glass Noodle Salad",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Indian Noodle Dishes",
+                  "items": [
+                    {
+                      "name": "Veg Hakka Noodles",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Maggi Noodles",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Masala Instant Noodles",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Korean Noodle Dishes",
+                  "items": [
+                    {
+                      "name": "Japchae",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Jajangmyeon",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Ramyeon",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Naengmyeon",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Western Noodle Dishes",
+                  "items": [
+                    {
+                      "name": "Chicken Noodle Soup",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Beef Stroganoff",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Tuna Noodle Casserole",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Macaroni and Cheese",
+                      "href": "#"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tacos",
+              "subPanels": [
+                {
+                  "title": "Tacos",
+                  "items": [
+                    {
+                      "name": "Street Tacos",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Carnitas Tacos",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Barbacoa Tacos",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Fish Tacos",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Vegetarian Tacos",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Enchiladas",
+                  "items": [
+                    {
+                      "name": "Chicken Enchiladas",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Cheese Enchiladas",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Beef Enchiladas",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Suizas Enchiladas",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Tamales",
+                  "items": [
+                    {
+                      "name": "Pork Tamales",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Chicken Tamales",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Sweet Tamales",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Quesadillas",
+                  "items": [
+                    {
+                      "name": "Cheese Quesadillas",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Chicken Quesadillas",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Vegetarian Quesadillas",
+                      "href": "#"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "smart-meals",
+              "subPanels": [
+                {
+                  "title": "Balanced Meals",
+                  "items": [
+                    {
+                      "name": "Grilled chicken breast with steamed broccoli and quinoa",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Baked salmon with asparagus and brown rice",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Low-Carb Meals",
+                  "items": [
+                    {
+                      "name": "Cauliflower rice stir-fry with tofu and mixed vegetables",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Zucchini noodles with pesto and grilled shrimp",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "High-Protein Meals",
+                  "items": [
+                    {
+                      "name": "Lean beef or turkey burger with a side salad",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Greek yogurt parfait with berries and nuts",
+                      "href": "#"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "burger",
+              "subPanels": [
+                {
+                  "title": "Classic Burgers",
+                  "items": [
+                    {
+                      "name": "Cheeseburger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Bacon Cheeseburger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Double Cheeseburger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Triple Cheeseburger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Classic Veggie Burger",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Patty Variations",
+                  "items": [
+                    {
+                      "name": "Turkey Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Chicken Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Bison Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Salmon Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Black Bean Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Portobello Mushroom Burger",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Flavorful Toppings",
+                  "items": [
+                    {
+                      "name": "BBQ Burgerges",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Mushroom Swiss Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Western/Cowboy Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Blue Cheese Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Jalapeño Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Guacamole Burger",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Breakfast Burger",
+                  "items": [
+                    {
+                      "name": "Avocado Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Caprese Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Mediterranean Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Tex-Mex Burger",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Reuben Burger",
+                      "href": "#"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "beverages-desserts",
+              "subPanels": [
+                {
+                  "title": "Coffee Based",
+                  "items": [
+                    {
+                      "name": "Espresso",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Cappuccino",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Latte",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Americano",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Mocha",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Macchiato",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Tea",
+                  "items": [
+                    {
+                      "name": "Black Tea",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Green Tea",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Herbal Tea",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Chai Tea",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Earl Grey",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Cakes",
+                  "items": [
+                    {
+                      "name": "Chocolate Cake",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Carrot Cake",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Red Velvet Cake",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Cheesecake",
+                      "href": "#"
+                    }
+                  ]
+                },
+                {
+                  "title": "Cookies & Pastries",
+                  "items": [
+                    {
+                      "name": "Chocolate Chip Cookies",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Oatmeal Raisin Cookies",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Peanut Butter Cookies",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Sugar Cookies",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Croissant",
+                      "href": "#"
+                    },
+                    {
+                      "name": "Danish Pastry",
+                      "href": "#"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pages",
+        "innerItems": [
+          {
+            "name": "Cart",
+            "href": "#"
+          },
+          {
+            "name": "Whilist",
+            "href": "#"
+          },
+          {
+            "name": "Checkout",
+            "href": "#"
+          },
+          {
+            "name": "FAQs",
+            "href": "#"
+          },
+          {
+            "name": "Contact Us",
+            "href": "#"
+          },
+          {
+            "name": "Error 404",
+            "href": "#"
+          },
+          {
+            "name": "Login",
+            "href": "#"
+          },
+          {
+            "name": "Register",
+            "href": "#"
+          },
+          {
+            "name": "Forgot Password",
+            "href": "#"
+          },
+          {
+            "name": "Reset Password",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "name": "Admin",
         "href": "#"
       }
     ],
+    "userList": {
+      "name": "UserDropdown",
+      "innerItems":[
+        {
+          "name": "Admin",
+          "code": "Ad",
+          "href": "#"
+        },
+        {
+          "name": "Cart",
+          "code": "Ca",
+          "href": "#"
+        },
+        {
+          "name": "Wishlist",
+          "code": "WL",
+          "href": "#"
+        },
+        {
+          "name": "Log Out",
+          "code": "LO",
+          "href": "#"
+        }
+      ]
+    },
     "config": {
       "name": "Language",
+      "actual": "English",
+      "code": "en",
       "innerItems": [
         {
           "name": "Español",

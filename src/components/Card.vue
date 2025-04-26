@@ -8,7 +8,7 @@ defineProps<{ cardContent: CardContent }>()
 </script>
 
 <template>
-	<div class="rounded-md shadow-lg border">
+	<div class="rounded-md shadow-lg border dark:border-gray-900">
 		<div class="p-6">
 			<div class="mb-6">
 				<img :src="cardContent.imagenLink" class="object-cover w-16 h-16">
