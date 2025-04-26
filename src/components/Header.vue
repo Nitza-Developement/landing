@@ -13,7 +13,7 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
 
 <template>
   <header
-    class="sticky bg-white z-10 flex justify-center top-0 border-b border-slate-200 bg-transparent">
+    class="sticky bg-white z-10 flex justify-center top-0 border-b border-slate-200 bg-transparent dark:bg-slate-950 dark:border-slate-800">
     <div class="lg:h-20 h-14 w-full flex justify-center items-center">
       <div class="container">
         <div class="flex items-center justify-between p-4">
@@ -39,7 +39,7 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
           <!-- Nevigation Menu -->
           <!-- el menu del nav esta siendo pintado por la directiva v-for -->
           <ul class="lg:flex 2xl:ml-60 items-center justify-center hidden relative">
-            <li v-for="item, index in headerContent.items" :key="index">
+            <li class="dark:text-slate-300" v-for="item, index in headerContent.items" :key="index">
               <Dropdown v-if="item.innerItems"  :item='item' :customStyle="'mt-3 min-w-52'" />
               <MegaMenu v-else-if="item.megaMenuContent"  :item='item' />
               <a class="cursor-pointer py-2 px-4" v-else>{{ item.name }}</a>
@@ -76,7 +76,7 @@ const headerContent: HeaderContent = <HeaderContent>localeMessages.header;
 
             <!-- Cart Page link -->
             <li class="flex ">
-              <a href="#" class="relative flex text-base transition-all text-slate-600 hover:text-primary">
+              <a href="#" class="relative flex text-base transition-all text-slate-600 hover:text-primary dark:text-slate-400">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   data-lucide="shopping-bag" class="lucide lucide-shopping-bag w-5 h-5">

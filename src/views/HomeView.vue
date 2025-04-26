@@ -44,6 +44,6 @@ const cardsContent: CardContent[] = <CardContent[]>localeMessages.cardsContent;
     text="Healthy and Delicious Food" />
   <ReviewBars img="https://coderthemes.com/yum/assets/burger-1-0c3ba5a6.svg" name="MCD Veg Burger" :stars=5
     signal="$"  text2="8.14" />
-    <footer  class="border-t border-slate-200"><Footer/></footer>
+    <footer  class="border-t border-slate-200 dark:border-slate-700"><Footer/></footer>
    
 </template>

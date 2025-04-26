@@ -5,11 +5,11 @@ import Subscribe from './Subscribe.vue';
 
 <template>
     <div class="container mr-auto ml-auto pr-4 pl-4">
-        <div class="grid lg:grid-cols-3 items-center gap-6 lg:py-10 py-6">
+        <div class="grid lg:grid-cols-3 items-center gap-6 lg:py-8 py-6">
             <div class="lg:col-span-2">
                 <div class="grid md:grid-cols-4 grid-cols-2 gap-6 mb-6">
                     <div class="flex flex-col gap-3">
-                        <h5 class="mb-3 font-semibold text-slate-950 dark:text-white">About</h5>
+                        <h6 class="mb-3 font-semibold text-slate-950 dark:text-white">About</h6>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">About Us</a></div>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">Features</a></div>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">News</a></div>
@@ -18,7 +18,7 @@ import Subscribe from './Subscribe.vue';
                     </div>
 
                     <div class="flex flex-col gap-3">
-                        <h5 class="mb-3 font-semibold text-slate-950 dark:text-white">Company</h5>
+                        <h6 class="mb-3 font-semibold text-slate-950 dark:text-white">Company</h6>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">Our Team</a></div>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">Partner with Us</a></div>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">FAQs</a></div>
@@ -26,7 +26,7 @@ import Subscribe from './Subscribe.vue';
                     </div>
 
                     <div class="flex flex-col gap-3">
-                        <h5 class="mb-3 font-semibold text-slate-950 dark:text-white">Support</h5>
+                        <h6 class="mb-3 font-semibold text-slate-950 dark:text-white">Support</h6>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">About</a></div>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">Support Center</a></div>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">Feedback</a></div>
@@ -35,7 +35,7 @@ import Subscribe from './Subscribe.vue';
                     </div>
 
                     <div class="flex flex-col gap-3">
-                        <h5 class="mb-3 font-semibold text-slate-950 dark:text-white">Get in touch</h5>
+                        <h6 class="mb-3 font-semibold text-slate-950 dark:text-white">Get in touch</h6>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">(+123) 456 789 123</a></div>
                         <div class="text-slate-600 dark:text-slate-300"><a href="javascript:void(0);">example@mail.com</a></div>
                         <div class="flex items-center gap-4">
@@ -96,11 +96,11 @@ import Subscribe from './Subscribe.vue';
             </div>
         </div>
 
-        <div class="py-6 border-t border-slate-200 lg:flex hidden">
+        <div class="py-6 border-t border-slate-200 lg:flex hidden dark:border-slate-700">
             <div class="container">
                 <div class="grid lg:grid-cols-2 items-center gap-6">
                     <div>
-                        <p class="text-slate-600 dark:text-slate-300">
+                        <p class="text-slate-600 dark:text-slate-400">
                             <span> {{ new Date().getFullYear() }} </span> Design crafted <svg
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -129,5 +129,3 @@ import Subscribe from './Subscribe.vue';
         </div>
     </div>
 </template>
-
-<style scoped></style>

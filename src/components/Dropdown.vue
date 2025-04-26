@@ -50,7 +50,7 @@ const isOpen: Ref<boolean> = ref(false);
             {{ t('header.config.actual') }}
           </span>
         </a>
-        <a v-else-if="isUserList" class="relative flex items-center text-base text-slate-600 hover:text-primary"
+        <a v-else-if="isUserList" class="relative flex items-center text-base text-slate-600 hover:text-primary dark:text-slate-400"
           href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user"
@@ -59,7 +59,7 @@ const isOpen: Ref<boolean> = ref(false);
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
         </a>
-        <a v-else class="flex py-2 px-4 items-center cursor-pointer">
+        <a v-else class="flex py-2 px-4 items-center cursor-pointer dark:text-slate-300">
           {{ item.name }}
           <ChevronDownIcon class="size-5 flex-none text-gray-400" />
         </a>

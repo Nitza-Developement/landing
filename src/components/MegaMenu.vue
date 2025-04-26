@@ -17,7 +17,7 @@ const selectedButton = ref<string>("wraps"); // Estado para rastrear el botón s
       class="inline-flex relative items-center text-sm lg:text-base font-medium text-slate-800 py-2 px-4 rounded-full hover:text-primary"
       @mouseenter="isOpen = true" @mouseleave="isOpen = false">
       <div>
-        <span class="flex items-center cursor-pointer">
+        <span class="flex items-center cursor-pointer dark:text-slate-300">
           {{ item.name }}
           <ChevronDownIcon class="size-5 flex-none text-gray-400" aria-hidden="true" />
         </span>
