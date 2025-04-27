@@ -771,10 +771,6 @@
       "code": "en",
       "innerItems": [
         {
-          "name": "Español",
-          "lang": "es"
-        },
-        {
           "name": "English",
           "lang": "en"
         }
