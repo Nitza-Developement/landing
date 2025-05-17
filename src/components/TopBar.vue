@@ -12,7 +12,7 @@ const localeMessages = getLocaleMessage(savedLocale());
 const headerContent: HeaderContent = <HeaderContent>localeMessages.header; 
 </script>
 <template>
-  <div class="h-8 lg:flex justify-center items-center bg-primary-950 text-white z-20">
+  <div class="h-8 xl:flex justify-center hidden items-center bg-primary-950 text-white z-20">
     <div class="container">
       <nav class="flex items-center justify-between p-4">
         <Dropdown :item="headerContent.config" :is-language-selector="true" :customStyle="'mt-3 min-w-32 -left-2'"/>    

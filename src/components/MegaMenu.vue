@@ -16,20 +16,20 @@ const selectedButton = ref<string>("wraps"); // Estado para rastrear el botón s
     <div
       class="inline-flex relative items-center text-sm lg:text-base font-medium text-slate-800 py-2 px-4 rounded-full hover:text-primary"
       @mouseenter="isOpen = true" @mouseleave="isOpen = false">
-      <div>
-        <span class="flex items-center cursor-pointer dark:text-slate-300">
+      <button @click="isOpen = !isOpen"
+        class="group w-full px-4 justify-between flex items-center hover:bg-slate-100 rounded-md">
+        <a class="flex xl:py-1 group-hover:text-primary items-center cursor-pointer dark:text-slate-300">
           {{ item.name }}
-          <ChevronDownIcon class="size-5 flex-none text-gray-400" aria-hidden="true" />
-        </span>
-      </div>
+        </a>
+        <ChevronDownIcon :class="{ 'rotate-180': isOpen }"
+        class="size-5 transition-transform duration-300 text-gray-500 inline-block ml-2 group-hover:text-primary"/>
+      </button>
       <!-- aqui se hace el tipo de transition y se crea el panel del menu en dependencia de su tipo -->
       <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1"
         enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150"
         leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-        <div v-show="isOpen"
-          class="fixed top-24 bottom-auto m-auto left-20 right-20 z-30 rounded-md bg-white shadow-lg ring-1 mt-3 container
-          ring-gray-900/5 dark:bg-slate-950"
-          @mouseenter="isOpen = true" @mouseleave="isOpen = false">
+        <div v-show="isOpen" class="fixed top-24 bottom-auto m-auto left-20 right-20 z-30 rounded-md bg-white shadow-lg ring-1 mt-3 container
+          ring-gray-900/5 dark:bg-slate-950" @mouseenter="isOpen = true" @mouseleave="isOpen = false">
           <div class="bg-white shadow-lg rounded-lg border border-slate-200 dark:bg-slate-950 dark:border-slate-800">
             <div class="flex">
               <div class="text-sm w-fit whitespace-nowrap">
@@ -56,8 +56,9 @@ const selectedButton = ref<string>("wraps"); // Estado para rastrear el botón s
                           {{ subPanel.title }}</p>
                         <ul class="grid space-y-3 mt-4">
                           <li v-for="item, index in subPanel.items" :key="index">
-                            <a class="text-sm font-bold pl-3 text-slate-500 hover:text-primary dark:text-slate-400" :href="item.href">{{
-                              item.name }}</a>
+                            <a class="text-sm font-bold pl-3 text-slate-500 hover:text-primary dark:text-slate-400"
+                              :href="item.href">{{
+                                item.name }}</a>
                           </li>
                         </ul>
                       </div>
