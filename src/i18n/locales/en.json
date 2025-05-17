@@ -1,6 +1,61 @@
 {
   "header": {
     "logoName": "Enterprise",
+    "itemsMovile": [
+      {
+        "name": "Home",
+        "href": "#"
+      },
+      {
+        "name": "Product",
+        "innerItems": [
+          {
+            "name": "Product Grid",
+            "href": "#"
+          },
+          {
+            "name": "Product List",
+            "href": "#"
+          },
+          {
+            "name": "Product Detail",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "name": "My Wishlist",
+        "href": "#"
+      },
+      {
+        "name": "Contact Us",
+        "href": "#"
+      },
+      {
+        "name": "FAQs",
+        "href": "#"
+      },
+      {
+        "name": "Error Page",
+        "href": "#"
+      },
+      {
+        "name": "Login",
+        "href": "#"
+      },
+      {
+        "name": "Register",
+        "href": "#"
+      },
+      {
+        "name": "Forgot Password",
+        "href": "#"
+      },
+      {
+        "name": "Reset Password",
+        "href": "#"
+      }
+    ],
     "items": [
       {
         "name": "Home",
@@ -819,7 +874,7 @@
       "text": "Notifications"
     }
   },
-  "home": {
+  "footer": {
     "subscribe": {
       "title": "Subscribe",
       "text": "A Res is a self-service shop offering a wide variety of food, beverages & household products we’re engage with their clients & their team.",
