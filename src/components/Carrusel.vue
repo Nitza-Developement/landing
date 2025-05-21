@@ -35,9 +35,9 @@ onMounted(() => {
 
 <template>
   <div class="p-5 w-full md:w-1/2">
-    <Badge :text="t('home.reviews.badge_text')" type="Default" />
+    <Badge :text="t('footer.reviews.badge_text')" type="Default" />
     <h2 class="text-3xl font-semibold text-slate-900 max-w-xl mb-4 mt-2 dark:text-white"
-      v-html="t('home.reviews.title')"></h2>
+      v-html="t('footer.reviews.title')"></h2>
     <div>
       <transition name="fade" mode="out-in">
         <div :key="activeTab" class="p-5 rounded-md">

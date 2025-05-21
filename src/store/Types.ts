@@ -33,6 +33,7 @@ export type HeaderItem = {
 }
 
 export type HeaderContent = {
+	itemsMovile: HeaderItem[],
 	items: HeaderItem[],
 	config: HeaderItem,
 	logoName: string

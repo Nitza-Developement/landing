@@ -2,7 +2,7 @@
 import type { HeaderItem } from '../store/Types';
 import { ChevronDownIcon } from '@heroicons/vue/20/solid';
 import { useI18n } from 'vue-i18n';
-import { ref, type Ref } from 'vue';
+import { onMounted, onUnmounted, ref, type Ref } from 'vue';
 import { ArrowRightStartOnRectangleIcon, HeartIcon, ShoppingCartIcon, UserCircleIcon } from '@heroicons/vue/24/outline';
 import type { Component } from 'vue';
 
@@ -32,17 +32,28 @@ const icons: Record<string, Component> = {
   LO: ArrowRightStartOnRectangleIcon
 };
 
-
+const isXl:Ref<boolean> = ref(false);
 const isOpen: Ref<boolean> = ref(false);
+const updateScreenSize = () => {
+  isXl.value = window.innerWidth >= 1280;
+};
+onMounted(() => {
+  updateScreenSize();
+  window.addEventListener('resize', updateScreenSize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateScreenSize);
+});
 </script>
 
 <template>
-  <div class="relative z-20 flex">
+  <div class="relative flex-col z-20 flex">
     <!-- aqui se selecciona que tipo de elemento se va a pintar, menu, menu de lenguaje o enlace -->
     <div
-      class="inline-flex items-center text-sm lg:text-base font-medium text-slate-700 rounded-full hover:text-primary"
-      @mouseenter="isOpen = true" @mouseleave="isOpen = false">
-      <div>
+      class="inline-flex items-center text-base font-medium text-slate-700 rounded-full"
+      @mouseenter="isXl && (isOpen = true)" @mouseleave="isXl && (isOpen = false)">
+      <div class="w-full" @click="isOpen = !isOpen">
         <a v-if="isLanguageSelector"
           class="flex after:absolute hover:after:-bottom-10 after:inset-0 relative items-center text-base" href="#">
           <img alt="flag" class="h-3.5 me-3" :src="flags[t('header.config.code')]">
@@ -50,8 +61,8 @@ const isOpen: Ref<boolean> = ref(false);
             {{ t('header.config.actual') }}
           </span>
         </a>
-        <a v-else-if="isUserList" class="relative flex items-center text-base text-slate-600 hover:text-primary dark:text-slate-400"
-          href="#">
+        <a v-else-if="isUserList"
+          class="relative flex items-center text-base text-slate-600 hover:text-primary dark:text-slate-400" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user"
             class="lucide lucide-user w-5 h-5">
@@ -59,10 +70,16 @@ const isOpen: Ref<boolean> = ref(false);
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
         </a>
-        <a v-else class="flex py-2 px-4 items-center cursor-pointer dark:text-slate-300">
-          {{ item.name }}
-          <ChevronDownIcon class="size-5 flex-none text-gray-400" />
-        </a>
+        <button v-else
+          class="group w-1/2 px-4 py-2 justify-between flex items-center xl:hover:bg-white
+          hover:bg-slate-100 xl:dark:hover:bg-slate-950 dark:hover:bg-slate-900 rounded-md">
+          <span :class="{ 'text-primary dark:text-primary': isOpen }" class="xl:py-1 group-hover:text-primary cursor-pointer dark:text-slate-300">
+            {{ item.name }}
+          </span>
+          <ChevronDownIcon :class="{ 'rotate-180 text-primary dark:text-primary': isOpen }"
+            class="size-5 transition-transform duration-300 dark:text-slate-300 text-gray-500 
+            inline-block ml-2 group-hover:text-primary" />
+        </button>
       </div>
     </div>
     <!-- aqui se hace el tipo de transition y se crea el panel del menu en dependencia de su tipo -->
@@ -70,25 +87,24 @@ const isOpen: Ref<boolean> = ref(false);
       enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150"
       leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
       <div v-show="isOpen" :class="customStyle"
-        class="absolute top-full whitespace-nowrap z-10 rounded-md bg-white shadow-lg ring-1 ring-gray-900/5 dark:bg-slate-950"
-        @mouseenter="isOpen = true" @mouseleave="isOpen = false">
+        class="xl:absolute top-full whitespace-nowrap z-10 rounded-md bg-white shadow-lg ring-1 ring-gray-900/5 dark:bg-slate-950"
+        @mouseenter="isXl && (isOpen = true)" @mouseleave="isXl && (isOpen = false)">
         <div>
           <div v-for="(item, index) in item.innerItems" :key="index">
-            <span v-if="isLanguageSelector && item.lang" @click="changeLanguage(item.lang)"
-              class="cursor-pointer flex items-center gap-2 font-normal text-slate-600 hover:text-slate-700 hover:bg-slate-100 
+            <span v-if="isLanguageSelector && item.lang" @click="changeLanguage(item.lang)" class="cursor-pointer flex items-center gap-2 font-normal text-slate-600 hover:text-slate-700 hover:bg-slate-100 
               py-2 px-3 rounded dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-300"
               href="javascript:void(0)">
               <img alt="flag" class="h-4" :src="flags[item.lang]">
               {{ item.name }}
             </span>
-            <a v-else-if="isUserList && item.code"
-              class="flex items-center gap-3 m-1 font-normal text-slate-600 py-2 px-3 hover:text-slate-700 hover:bg-slate-100 rounded 
+            <a v-else-if="isUserList && item.code" class="flex items-center gap-3 m-1 font-normal text-slate-600 py-2 px-3 hover:text-slate-700 hover:bg-slate-100 rounded 
               cursor-pointer dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-300"
               href="javascript:void(0)">
               <component :is="icons[item.code]" class="size-5 text-gray-600" />
               {{ item.name }}
             </a>
-            <a v-else :href="item.href" class="flex items-center font-normal text-slate-600 py-2 
+            <a v-else :href="item.href"
+              class="flex items-center font-normal text-slate-600 py-2 
             px-3 transition-all hover:text-slate-950 hover:bg-slate-100 rounded dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-300">
               {{ item.name }}
             </a>
