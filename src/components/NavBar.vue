@@ -5,6 +5,7 @@ import { savedLocale } from '../i18n/i18n';
 import type { HeaderContent } from '../store/Types';
 import MegaMenu from './MegaMenu.vue';
 import { ref } from 'vue';
+import { XMarkIcon } from '@heroicons/vue/20/solid';
 const { getLocaleMessage } = useI18n();
 
 
@@ -109,15 +110,19 @@ const toggleMobileMenu = () => {
   <div @click="toggleMobileMenu" :class="{ 'hidden': !isOpenMenu }"
     class="xl:hidden h-svh w-full absolute top-0 z-20 bg-gray-900/50">
   </div>
-  <div :class="{ 'hidden': !isOpenMenu }" class="w-3/4 xl:hidden absolute top-0 z-30 bg-white h-svh">
-    <div class="border-b-2 border-gray-100 dark:border-gray-700 items-center h-14 flex">
+  <div :class="{ 'hidden': !isOpenMenu }" class="w-3/4 xl:hidden dark:bg-slate-950 absolute top-0 z-30 bg-white h-svh">
+    <div
+      class="border-b-2 border-gray-100 dark:border-slate-800 dark:bg-slate-950 justify-between items-center h-14 lg:h-20 flex">
       <img src="/imagenes/logo-dark-6dbab3e1.png" alt="darkLogo" class=" mt-1 h-10 inline-block dark:hidden ml-16">
       <img src="/imagenes/logo-light-35c89c2c.png" alt="lightLogo" class="mt-1 h-10 hidden dark:inline-block ml-16">
+      <XMarkIcon @click="toggleMobileMenu" class="size-8 mr-8 dark:text-slate-300 text-gray-500 hover:text-primary cursor-pointer"/>
     </div>
-    <ul class="mt-6 space-y-4 font-medium text-sm pl-4">
+    <ul class="mt-6 font-medium pl-4">
       <li class="dark:text-slate-300" v-for="item, index in headerContent.itemsMovile" :key="index">
-        <Dropdown v-if="item.innerItems" :item='item' :customStyle="'mt-3 min-w-48 -left-8'" />
-        <a class="cursor-pointer py-2 px-4" v-else>{{ item.name }}</a>
+        <Dropdown v-if="item.innerItems" :item='item' :customStyle="'mt-3 pl-4 w-3/4'" />
+        <div v-else class="py-2">
+          <a class="cursor-pointer px-4 text-slate-700 dark:text-slate-300">{{ item.name }}</a>
+        </div>
       </li>
     </ul>
   </div>

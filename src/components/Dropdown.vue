@@ -51,9 +51,9 @@ onUnmounted(() => {
   <div class="relative flex-col z-20 flex">
     <!-- aqui se selecciona que tipo de elemento se va a pintar, menu, menu de lenguaje o enlace -->
     <div
-      class="inline-flex items-center text-sm lg:text-base font-medium text-slate-700 rounded-full hover:text-primary"
+      class="inline-flex items-center text-base font-medium text-slate-700 rounded-full"
       @mouseenter="isXl && (isOpen = true)" @mouseleave="isXl && (isOpen = false)">
-      <div @click="isOpen = !isOpen">
+      <div class="w-full" @click="isOpen = !isOpen">
         <a v-if="isLanguageSelector"
           class="flex after:absolute hover:after:-bottom-10 after:inset-0 relative items-center text-base" href="#">
           <img alt="flag" class="h-3.5 me-3" :src="flags[t('header.config.code')]">
@@ -71,13 +71,14 @@ onUnmounted(() => {
           </svg>
         </a>
         <button v-else
-          class="group w-full px-4 justify-between flex items-center hover:bg-slate-100 rounded-md">
-          <span class="xl:py-1 group-hover:text-primary cursor-pointer dark:text-slate-300">
+          class="group w-1/2 px-4 py-2 justify-between flex items-center xl:hover:bg-white
+          hover:bg-slate-100 xl:dark:hover:bg-slate-950 dark:hover:bg-slate-900 rounded-md">
+          <span :class="{ 'text-primary dark:text-primary': isOpen }" class="xl:py-1 group-hover:text-primary cursor-pointer dark:text-slate-300">
             {{ item.name }}
           </span>
-          <ChevronDownIcon :class="{ 'rotate-180': isOpen }"
-            class="size-5 transition-transform duration-300 text-gray-500 inline-block ml-2 group-hover:text-primary" />
-
+          <ChevronDownIcon :class="{ 'rotate-180 text-primary dark:text-primary': isOpen }"
+            class="size-5 transition-transform duration-300 dark:text-slate-300 text-gray-500 
+            inline-block ml-2 group-hover:text-primary" />
         </button>
       </div>
     </div>

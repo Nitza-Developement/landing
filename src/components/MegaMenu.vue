@@ -17,7 +17,7 @@ const selectedButton = ref<string>("wraps"); // Estado para rastrear el botón s
       class="inline-flex relative items-center text-sm lg:text-base font-medium text-slate-800 py-2 px-4 rounded-full hover:text-primary"
       @mouseenter="isOpen = true" @mouseleave="isOpen = false">
       <button @click="isOpen = !isOpen"
-        class="group w-full px-4 justify-between flex items-center hover:bg-slate-100 rounded-md">
+        class="group w-full px-4 justify-between flex items-center rounded-md">
         <a class="flex xl:py-1 group-hover:text-primary items-center cursor-pointer dark:text-slate-300">
           {{ item.name }}
         </a>
